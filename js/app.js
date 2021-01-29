@@ -12,7 +12,7 @@ let seattle = {
   cookiesSoldPerCustomerArry: [],
   dailyStoreTotal: 0,
   randomCustomerEachHour: function () {
-    console.log('at randomCustomerEachHour works');
+    // console.log('at randomCustomerEachHour works');
     return Math.round(Math.random() * (this.maxCustomerEachHour - this.minCustomerEachHour + 1) + this.minCustomerEachHour);
   },
   //method to cal and populate # of cookies sold per hour
@@ -20,7 +20,7 @@ let seattle = {
     // console.log(randomCookiesSoldPerHour);
     for (let i = 0; i < hours.length; i++) {
       let randomCookiesSoldPerHour = this.randomCustomerEachHour();
-      this.cookiesSoldPerCustomerArry.push(randomCookiesSoldPerHour * this.avgCookieSoldPerCustomer);
+      this.cookiesSoldPerCustomerArry.push(Math.ceil(randomCookiesSoldPerHour * this.avgCookieSoldPerCustomer));
     }
 
   },
@@ -35,7 +35,7 @@ let seattle = {
     for (let i = 0; i < hours.length; i++) {
       let li = document.createElement('li');
 
-      li.innerHTML = hours[i] + ' : ' + this.cookiesSoldPerCustomerArry[i];
+      li.innerHTML = hours[i] + ':' + this.cookiesSoldPerCustomerArry[i];
 
       ul.append(li);
 
@@ -67,7 +67,7 @@ let tokyo = {
     // console.log(randomCookiesSoldPerHour);
     for (let i = 0; i < hours.length; i++) {
       let randomCookiesSoldPerHour = this.randomCustomerEachHour();
-      this.cookiesSoldPerCustomerArry.push(randomCookiesSoldPerHour * this.avgCookieSoldPerCustomer);
+      this.cookiesSoldPerCustomerArry.push(Math.ceil(randomCookiesSoldPerHour * this.avgCookieSoldPerCustomer));
     }
 
   },
@@ -111,7 +111,7 @@ let dubai = {
     // console.log(randomCookiesSoldPerHour);
     for (let i = 0; i < hours.length; i++) {
       let randomCookiesSoldPerHour = this.randomCustomerEachHour();
-      this.cookiesSoldPerCustomerArry.push(randomCookiesSoldPerHour * this.avgCookieSoldPerCustomer);
+      this.cookiesSoldPerCustomerArry.push(Math.ceil(randomCookiesSoldPerHour * this.avgCookieSoldPerCustomer));
     }
 
   },
@@ -155,7 +155,7 @@ let paris = {
     // console.log(randomCookiesSoldPerHour);
     for (let i = 0; i < hours.length; i++) {
       let randomCookiesSoldPerHour = this.randomCustomerEachHour();
-      this.cookiesSoldPerCustomerArry.push(randomCookiesSoldPerHour * this.avgCookieSoldPerCustomer);
+      this.cookiesSoldPerCustomerArry.push(Math.ceil(randomCookiesSoldPerHour * this.avgCookieSoldPerCustomer));
     }
 
   },
@@ -199,7 +199,7 @@ let lima = {
     // console.log(randomCookiesSoldPerHour);
     for (let i = 0; i < hours.length; i++) {
       let randomCookiesSoldPerHour = this.randomCustomerEachHour();
-      this.cookiesSoldPerCustomerArry.push(randomCookiesSoldPerHour * this.avgCookieSoldPerCustomer);
+      this.cookiesSoldPerCustomerArry.push(Math.ceil(randomCookiesSoldPerHour * this.avgCookieSoldPerCustomer));
     }
 
   },
