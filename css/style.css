@@ -29,3 +29,18 @@ p{
   margin-left: auto;
   margin-right: auto;
 }
+
+th, td {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid black;
+}
+
+.salmon-cookie {
+border: 3px solid black;
+position: relative;
+left: 350px;
+
+
+}
