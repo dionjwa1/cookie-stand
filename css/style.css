@@ -1,11 +1,10 @@
 body {
-background-color: aqua;
-
+  background-color: aqua;
+  font-family: 'Open Sans', sans-serif;
 }
 
 main {
   min-width: 1000px;
-
 }
 
 .div1 {
@@ -17,7 +16,6 @@ main {
   margin: 20px;
   left: 1400px;
   top: -60px;
-
 }
 
 .div2 {
@@ -28,7 +26,6 @@ main {
   padding: 25px;
   margin: 20px;
   left: -400px;
-
 }
 
 .div3 {
@@ -37,24 +34,22 @@ main {
   width: 300px;
   border: 15px solid green;
   padding: 25px;
-  margin: 20px;
+  margin: auto;
   left: -100px;
   bottom: -500px;
-
 }
 
 ul {
-border: 1px solid black;
-background-color: gray;
-text-emphasis: inherit;
-font-size:25px;
-
+  border: 1px solid black;
+  background-color: gray;
+  text-emphasis: inherit;
+  font-size:25px;
+  margin: auto;
 }
 
 h1{
   background-color:green;
- text-align: center;
-
+  text-align: center;
 }
 
 h2{
@@ -62,35 +57,29 @@ h2{
   background-color: bisque;
   text-align: center;
   top:-5px;
-
 }
 
 .locationsBold {
   font-weight: bold;
   text-align: center;
   text-decoration: underline;
-
 }
 
 .hoursBold {
   font-weight: bold;
   text-align: center;
   text-decoration: underline;
-
 }
 
 p {
   font-size:25px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: center;
-
 }
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 th, td {
@@ -98,14 +87,12 @@ th, td {
   width: 100%;
   border-collapse: collapse;
   border: 3px solid black;
-
 }
 
 .salmon-cookie {
-border: 3px solid black;
-position: relative;
-left: 350px;
-
+  border: 3px solid black;
+  position: relative;
+  left: 350px;
 }
 
 .ulProduct {
@@ -115,62 +102,38 @@ left: 350px;
 }
 
 .liContact {
-font-weight: bold;
-
-}
-
-/* .img1 {
-width: 200px;
-margin:  auto;
-display: inline-block;
-
-}
-
-.img2 {
-  width: 200px;
-  margin:  auto;
-  display: inline-block;
-
-  
-  }
-
-  .img3 {
-    width: 200px;
-    margin:  auto;
-    display: inline-block; 
-
-    
-    }
-
- .img4 {
-  width: 200px;
+  font-weight: bold;
   margin: auto;
-  display: inline-block;
-        
-} */
+}
+
+.sales {
+  position: absolute;
+  top: 25px;
+  text-align: center;
+}
 
 #imgContainer {
-display: flex; 
-justify-content: space-between;
-
+  display: flex; 
+  justify-content: space-between;
 }
 
 #imgContainer img {
-width: 300px;
-height: 400px;
-object-fit: contain;
+  width: 300px;
+  height: 400px;
+  object-fit: contain;
 }
 
 #imgContainer2 img {
   display: flex; 
   justify-content: space-between;
-  
-  }
+}
 
-  #imgContainer2 img {
-    width: 300px;
-    height: 400px;
-    object-fit: contain;
+#imgContainer2 img {
+  width: 300px;
+  height: 400px;
+  object-fit: contain;
+}
+
 
 
     
