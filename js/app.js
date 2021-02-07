@@ -2,8 +2,15 @@
 
 //console.log('Yo');
 let myContainer = document.getElementById('container');
+let myTable = document.createElement('table');
+myContainer.appendChild(myTable);
+let tfoot = document.createElement('tfoot');
+
+
 const hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 const allCities = [];
+let myForm = document.querySelector('form');
+// console.log(myForm);
 
 
 let img = document.createElement('img');
@@ -61,7 +68,7 @@ CookieCity.prototype.render = function () {
 
 
   tr.append(td);
-  myContainer.append(tr);
+  myTable.append(tr);
 };
 function renderHeader() {
   let tr = document.createElement('tr');
@@ -76,24 +83,52 @@ function renderHeader() {
   let td = document.createElement('td');
   td.innerHTML = 'Daily Store Total';
   tr.append(td);
-  myContainer.append(tr);
+  myTable.append(tr);
 }
 
 function renderFooter() {
   let tr = document.createElement('tr');
-  let tf = document.createElement('tf');
-  tf.innerHTML = ' ';
-  tr.append(tf);
-  for (let i = 0; i < hours.length; i++) {
-    let td = document.createElement('td');
-    tf.innerHTML = hours[i];
-    tr.append(td);
-  }
   let td = document.createElement('td');
-  td.innerHTML = 'Hourly Store Total';
-  tr.append(tf);
-  myContainer.append(tr);
+  td.innerHTML = 'Grand Totals';
+  tr.append(td);
+  for (let i = 0; i < hours.length; i++) {
+    let total = 0;
+    for (let j = 0; j < allCities.length; j++) {
+      total += allCities[j].cookiesSoldPerCustomerArry[i];
+    }
+    td = document.createElement('td');
+    td.innerHTML = total;
+    tr.append(td);
+
+  }
+
+  let total = 0;
+  for (let j = 0; j < allCities.length; j++) {
+    total += allCities[j].dailyStoreTotal;
+  }
+  td = document.createElement('td');
+  td.innerHTML = total;
+  tr.append(td);
+
+
+  tfoot.append(tr);
+  myTable.append(tfoot);
 }
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  let cityName = event.target.cityname.value;
+  let min = +event.target.min.value;
+  let max = +event.target.max.value;
+  let avg = +event.target.avg.value;
+
+  let newCity = new CookieCity(cityName, min, max, avg);
+  newCity.render();
+  tfoot.innerHTML = '';
+  renderFooter();
+}
+
 new CookieCity('Seattle', 23, 65, 6.3);
 new CookieCity('Tokyo', 3, 24, 1.2);
 new CookieCity('Dubai', 11, 38, 3.7);
@@ -107,6 +142,8 @@ function renderTable() {
   }
 }
 renderTable();
+renderFooter();
+myForm.addEventListener('submit', handleSubmit);
 
 // let th = document.createElement('tr');
 //     for (let i = 0; i < hours.length; i++) {
