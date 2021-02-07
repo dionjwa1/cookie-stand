@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>Document</title>
-    <title>Salmon Cookies</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+  <title>Salmon Cookies</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header><a href="index.html">Main Cookie Page</a></header>
-  <h1>Salmon Cookie Sales</h1>
-  
-  <div id='container'>
-      
-  </div>
+  <main>
+    <h1>Salmon Cookie Sales</h1>
+    <form id="formContainer">
+      <fieldset>
+        <legend>Add Cookie City</legend>
 
+        <label>City Name
+          <input type="text" name="cityname">
+        </label>
+
+        <label>Min Cookies Per Hour
+          <input type="number" name="min">
+        </label>
+        <label>Max Cookies Per Hour
+          <input type="number" name="max">
+        </label>
+        <label>Avg Cookies Per Customer
+          <input type="number" name="avg">
+        </label>
+
+        <button type="submit">Send</button>
+
+      </fieldset>
+    </form>
+    <div id='container'>
+
+    </div>
+  </main>
   <script src="js/app.js"></script>
 </body>
 
