@@ -134,6 +134,13 @@ th, td {
   object-fit: contain;
 }
 
+input:valid {
+  border: 2px solid green;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
 
 
     
