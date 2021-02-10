@@ -1,6 +1,8 @@
 body {
-  background-color: aqua;
-  font-family: 'Open Sans', sans-serif;
+  background-image: url('../img/Beach.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+    font-family: 'Open Sans', 'sans-serif';
 }
 
 main {
@@ -124,8 +126,12 @@ th, td {
 }
 
 #imgContainer2 img {
-  display: flex; 
-  justify-content: space-between;
+height: 200px;
+width: 200px;
+display: inline-block;
+justify-content: space-between;
+
+
 }
 
 #imgContainer2 img {
